@@ -70,6 +70,82 @@
             margin-top: 100px;
             margin-left: 0px;
         }
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 80px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            margin-left: auto;
+        }
+        li {
+            margin-left: 10px;
+        }
+        li a, .dropdown-btn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            text-align: left;
+            top: 66px;
+            border: 1px solid white;
+            right: 0;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 18px;
+            display: flex;
+            text-align: left;
+            text-decoration: none;
+        }
+        .dropdown-content img {
+            margin-right: 10px;
+            max-width: 25px;
+            max-height: 25px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition-delay: 0.1s;
+        }
+        .bienvenidos {
+            text-align: center;
+            margin-top: 130px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            font-weight: bold;
+            font-family: 'Press Start 2P', system-ui;
+        }
+        .texto-normal {
+            text-align: center;
+            margin-left: 250px;
+            margin-right: 250px;
+            font-size: 20px;
+            color: white;
+        }
+        .texto-bold {
+            text-align: center;
+            margin-left: 250px;
+            margin-right: 250px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -77,22 +153,33 @@
     <div class="cuadro-negro">
         <a href="index.html"><img src="https://i.imgur.com/sUw38sE.png" alt="Logo" title="Hola"></a>
         <p style="font-size: 20px; color: white; padding: 5px 10px; margin-bottom: 0; margin-left: 5px;">Versión Demo</p>
-        <a href="index.html" style="margin-top: 22px; top: 0; right: 0; margin-top: 20px; margin-right: 380px; position: absolute;font-size: 25px; font-weight: bold; color: white">Inicio</a></p>
-        <a href="GDE-CCAA.html" style="margin-top: 30px; top: 0; right: 0; margin-top: 20px; margin-right: 20px; position: absolute;font-size: 25px; font-weight: bold; color: white">Comunidades Autónomas</a></p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="GDE-CCAA.html">Comunidades Autónomas</a></li>
+                <li><a href="GDE-Provincias.html">Provincias</a></li>
+                <li><a href="#">Hardest de España</a></li>
+                <li><a href="#">Hardest del Año</a></li>
+            </ul>
     </div>
-    </div>
-    <p style="text-align: center; margin-top: 130px; font-size: 30px; font-weight: bold; color: white; font-weight: bold; font-family: 'Press Start 2P', system-ui">¡Bienvenidos!</a>
-        <p style="text-align: center; margin-left: 250px; margin-right: 250px; font-size: 20px; color: white;">En esta página web encontrarás los mapas de las Comunidades Autónomas y Provincias de España con sus respectivos Hardests, los Hardests que tuvo España desde 2014 y los Hardests de cada Año.</p>
+    <p class="bienvenidos">¡Bienvenidos!</a>
+    <p class="texto-normal">En esta página web encontrarás los mapas de las Comunidades Autónomas y Provincias de España con sus respectivos Hardests, los Hardests que tuvo España desde 2014 y los Hardests de cada Año.</p>
+    <p class="texto-normal">NOVEDADES</p>
+    <p class="texto-normal">Comunidades Autónomas, Provinas, Hardest de España y Hardest del Año</p>
+    <p class="texto-bold">PRÓXIMA VERSIÓN: 1.0</p>
+    <p class="texto-normal">Próximamente</p>
+    
+
     <div class="cuadro-1">
-        <img class="etv" src="https://i.imgur.com/PkfwWqr.png" alt="Castilla-La Mancha" style="position: absolute; max-width: 90px; max-height: 90px; margin-top: -90px; margin-left: -650px">
+        <img src="https://i.imgur.com/PkfwWqr.png" alt="Castilla-La Mancha" style="position: absolute; max-width: 90px; max-height: 90px; margin-top: -90px; margin-left: -650px">
         <img class="etv" src="https://i.imgur.com/Tzgsguv.png" alt="Tigre-Cubo" style="margin-right: 20px; max-width: 90px; max-height: 90px">
     <img src="https://i.imgur.com/RiSMTqD.gif" alt="Tigre-Imagen" style=" max-width: 180px; max-height: 180px">
     <div class="informacion">
         <p style="margin-top: 22px; margin-left: 22px; font-size: 35px; font-weight: bold; color: white"><i>ElTigreVerde412</i></p>
         <p style="margin-left: 22px; font-size: 20px; font-weight: bold; color: white">Creador<br>
-        <p style="margin-left: 22px; font-size: 20px; color: white">8 de Octubre de 2005 (18 años) Guadalajara
-        </p></div>
+        <p style="margin-left: 22px; font-size: 20px; color: white">8 de Octubre de 2005 (18 años) Guadalajara</p></div>
     </div>
+
+
     <p style="text-align: center; margin-top: 60px; font-size: 30px; color: white; font-weight: bold">COMUNIDADES AUTÓNOMAS</p>
   <div class="mapa-ccaa">
     <div>
@@ -107,7 +194,19 @@
       <img src="https://i.imgur.com/b7nYLtd.jpg" alt="Imagen3">
       <p>2 de Agosto del 2023<br><a href="https://twitter.com/BlazerTheWolf/status/1686840939334053889" target="_blank" style="color: white">Creado por BlazerWolf</a></p>
     </div>
-    </div>
     
+
+    <p style="text-align: center; margin-top: 60px; font-size: 30px; color: white; font-weight: bold">PROVINCIAS (Creados por ElTigreVerde412)</p>
+  <div class="mapa-ccaa">
+    <div>
+      <img src="https://i.imgur.com/exLwaZ9.jpg" alt="Imagen1">
+      <img src="https://i.imgur.com/hkYbJD5.jpg" alt="Imagen1">
+      <p>Mapa de Octubre del 2022</p>
+    </div>
+    <div>
+      <img src="https://i.imgur.com/luR97jW.png" alt="Imagen1">
+      <img src="https://i.imgur.com/fnofnut.png" alt="Imagen1">
+      <p>Mapa Final del 2022</p>
+    </div>
 </body>
 </html>
