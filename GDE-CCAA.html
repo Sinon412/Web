@@ -37,11 +37,15 @@
             align-items: center;
             display: flex;
         }
+        .mapa-ccaa img {
+            max-width: 90%;
+            max-height: 90%;
+        }
         .cuadro-1 {
             position: relative;
             margin-top: 50px;
             height: 200px;
-            width: auto;
+            width: 1300;
             height: auto;
             border: 1px solid white;
             display: block;
@@ -51,6 +55,7 @@
             text-align: center;
             background-size: cover;
             background-position: center;
+            margin-left: 300px;
         }
         .cuadro-1::after {
             content: "";
@@ -59,6 +64,7 @@
             right: 0;
             bottom: 0;
             left: 0;
+            margin: 0;
             background-color: rgba(0, 0, 0, 0.50);
         }
         .cuadro-1 img {
@@ -110,6 +116,88 @@
             text-align: center;
             z-index: 3;
         }
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 80px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            margin-left: auto;
+        }
+        li {
+            margin-left: 10px;
+        }
+        li a, .dropdown-btn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            text-align: left;
+            top: 66px;
+            border: 1px solid white;
+            right: 0;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 18px;
+            display: flex;
+            text-align: left;
+            text-decoration: none;
+        }
+        .dropdown-content img {
+            margin-right: 10px;
+            max-width: 25px;
+            max-height: 25px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition-delay: 0.2s;
+        }
+        .jugador {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        .jugador a {
+            target: _blank;
+            color: white;
+        }
+        .ccaa {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            color: white;
+        }
+        .fecha {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .intentos {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -117,183 +205,199 @@
     <div class="cuadro-negro">
         <a href="index.html"><img src="https://i.imgur.com/sUw38sE.png" alt="Logo" title="Hola"></a>
         <p style="font-size: 20px; color: white; padding: 5px 10px; margin-bottom: 0; margin-left: 5px;">Versión Demo</p>
-        <a href="index.html" style="margin-top: 22px; top: 0; right: 0; margin-top: 20px; margin-right: 380px; position: absolute;font-size: 25px; font-weight: bold; color: white">Inicio</a></p>
-        <a href="GDE-CCAA.html" style="margin-top: 30px; top: 0; right: 0; margin-top: 20px; margin-right: 20px; position: absolute;font-size: 25px; font-weight: bold; color: white">Comunidades Autónomas</a></p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="GDE-CCAA.html">Comunidades Autónomas</a></li>
+                <li><a href="GDE-Provincias.html">Provincias</a></li>
+                <li><a href="#">Hardest de España</a></li>
+                <li><a href="#">Hardest del Año</a></li>
+            </ul>
     </div>
     <p style="text-align: center; margin-top: 130px; font-size: 50px; font-weight: bold; color: white; font-weight: bold;">COMUNIDADES AUTÓNOMAS</p>
     <div class="mapa-ccaa">
-        <img src="https://i.imgur.com/jo4I5FH.png" alt="Segunda-Imagen">
+        <img style="width: 1300" src="https://raw.githubusercontent.com/GDSpain/web/main/Espa%C3%B1a-CCAA-TR.png" alt="Segunda-Imagen">
+    </div>
+    <p style="text-align: center; margin-left: 250px; margin-right: 250px; font-size: 20px; color: white">Fecha: 3 de Febrero del 2024</p>
     </div>
     <div class="cuadro-1" style="background-image: url('https://i3.ytimg.com/vi/SOJwJm72ULQ/maxresdefault.jpg')">  <!-- TOP 1 / TerrBonnie -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/W3pf3tCNSPKwuPEp2-rQ41JpZ6Q8ka3GtjO48Qgzw5hOHqBve8y8Gf8TTpmQcsU1ys_xIGfJ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
             <div class="numero">1</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/vGfZFMl.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=SOJwJm72ULQ" target="_blank" style="color: white">TerrBonnie (Firework)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Castilla y León</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">22 de Agosto del 2022</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 42280</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/vGfZFMl.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=SOJwJm72ULQ">TerrBonnie (Firework)</a></p>
+            <p class="ccaa"><i>Castilla y León</i></p>
+            <p class="fecha">22 de Agosto del 2022</p>
+            <p class="intentos">Total de Intentos: 42280</p>
     </div>
     <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/CFtKelNdGCQ/maxresdefault.jpg')">  <!-- TOP 2 / 400 -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ZCmPGJ4buIZ71Icvq2DOQyZgNTqTKCaE6SFpYZ41E8F8SMJ1yOL421jtg3CJHxO4X96kkMtv=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
             <div class="numero">2</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/ewSwZGp.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=CFtKelNdGCQ" target="_blank" style="color: white">Cuatrocientos (LIMBO)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Cantabria</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">22 de Agosto del 2022</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 42280</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/ewSwZGp.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=CFtKelNdGCQ">Cuatrocientos (LIMBO)</a></p>
+            <p class="ccaa"><i>Cantabria</i></p>
+            <p class="fecha">23 de Junio del 2023</p>
+            <p class="intentos">Total de Intentos: 47434</p>
     </div>
     <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/duqm2EDZFzo/maxresdefault.jpg')">  <!-- TOP 3 / Miguel6456 -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/MXPuGNnE6pcnPXve_T-Kx8gwHJGEyDPiBP7FFKDIQMZFL2I5tSV7fO3c_ysqznBLEoHOz4dvEA=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero">3</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=duqm2EDZFzo" target="_blank" style="color: white">Miguel6456 (LIMBO)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Andalucía</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">7 de Agosto del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 35312</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=duqm2EDZFzo">Miguel6456 (LIMBO)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">7 de Agosto del 2023</p>
+            <p class="intentos">Total de Intentos: 35312</p>
     </div>
     <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/TrquqdExBOU/maxresdefault.jpg')">  <!-- TOP 4 / ElTitoGuille -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/6v9pcP9y_WMSjcRRZlcRp0gjv6Ze0kDSf50fe_jmwCOUbq47ie_bC5qGEt_B7d-dKKtiugMvfw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
-            <div class="numero">4</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=TrquqdExBOU&t" target="_blank" style="color: white">ElTitoGuille (LIMBO)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Andalucía</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">14 de Diciembre del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 30965</p>
+        <div class="numero">4</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=TrquqdExBOU&t">ElTitoGuille (LIMBO)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">14 de Diciembre del 2023</p>
+            <p class="intentos">Total de Intentos: 30965</p>
     </div>
     <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/FvV7RqbBrh4/maxresdefault.jpg')">  <!-- TOP 5 / Guille N.S. -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/K9oH9_-w8imbqHGbicEKJ8Yy5xKM-BrBV7Zo0_4h71JVZ1CCN3Y6ENH_aQstxgNiN2qyLV5Lnj4=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero">5</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/KzEcTcc.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=FvV7RqbBrh4" target="_blank" style="color: white">Guille N.S. (Saul Goodman)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Galicia</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">13 de Noviembre del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 49595</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/KzEcTcc.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=FvV7RqbBrh4">Guille N.S. (Saul Goodman)</a></p>
+            <p class="ccaa"><i>Galicia</i></p>
+            <p class="fecha">13 de Noviembre del 2023</p>
+            <p class="intentos">Total de Intentos: 49595</p>
     </div>
     <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/Pl4x2_-6QoM/hqdefault.jpg')">  <!-- TOP 6 / gbaqueroGD -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/AceaRaRjYcMVC9mnZVscyPGnE8cyDqZEbe7hehlqFKAe0mabHfsADLpQu0wdentob6_jBskM=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
             <div class="numero">6</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/Q2Ti0TJ.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=Pl4x2_-6QoM" target="_blank" style="color: white">gbaqueroGD (Oblivion)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Extremadura</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">28 de Julio del 2022</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: +31000</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/Q2Ti0TJ.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=Pl4x2_-6QoM">gbaqueroGD (Oblivion)</a></p>
+            <p class="ccaa"><i>Extremadura</i></p>
+            <p class="fecha">28 de Julio del 2022</p>
+            <p class="intentos">Total de Intentos: +31000</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/sTb1Bm-nGMA/maxresdefault.jpg')">  <!-- TOP 7 / BlazerWolf  -->
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/yIo7bkZpCLw/hqdefault.jpg')">  <!-- TOP 7 / LaserGD -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/SL-bmlNlwqsOrP3P0OBs12QJgfhCtcKnB_C6F7jmWOwujk1VWUjMv3-bHTEeQ4Z8uDd_p0SYKQ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">7</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/5gRFy6l.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=yIo7bkZpCLw&t">LaserGD (Sonic Wave Infinity)</a></p>
+            <p class="ccaa"><i>Comunidad de Madrid</i></p>
+            <p class="fecha">14 de Octubre del 2021</p>
+            <p class="intentos">Total de Intentos: 41281</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/sTb1Bm-nGMA/maxresdefault.jpg')">  <!-- TOP 8 / BlazerWolf  -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/StYqe2oUnWK4vumGc6c3V4HiF-Ukc0ONWOt0N1-ElmQlsQ9tyhS83n_egEK2PB-h0sBY3Bl5=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
-        <div class="numero">7</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/L9Fy59u.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=duqm2EDZFzo" target="_blank" style="color: white">BlazerWolf (Sonic Wave Infinity)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>La Rioja</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">2 de Diciembre del 2022</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: +48563</p>
+        <div class="numero">8</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/L9Fy59u.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=duqm2EDZFzo">BlazerWolf (Sonic Wave Infinity)</a></p>
+            <p class="ccaa"><i>La Rioja</i></p>
+            <p class="fecha">2 de Diciembre del 2022</p>
+            <p class="intentos">Total de Intentos: +48563</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/fn9bUHOrCUw/maxresdefault.jpg')">  <!-- TOP 8 / SuperJavicon -->
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/fn9bUHOrCUw/maxresdefault.jpg')">  <!-- TOP 9 / SuperJavicon -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/dPCkHO5HbpIg5JJmUZ4kUvk2L-qbvw7bBKcM6OrrlpoueJDC3pnPZBYiBpLys6csAIG1F8ilsQ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
-            <div class="numero">8</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/QgLa4AP.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=fn9bUHOrCUw" target="_blank" style="color: white">SuperJavicon (Sonic Wave Infinity)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Cataluña</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">5 de Julio del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 10740</p>
+            <div class="numero">9</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/QgLa4AP.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=fn9bUHOrCUw">SuperJavicon (Sonic Wave Infinity)</a></p>
+            <p class="ccaa"><i>Cataluña</i></p>
+            <p class="fecha">5 de Julio del 2023</p>
+            <p class="intentos">Total de Intentos: 10740</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/3qW6YNbmFHk/maxresdefault.jpg')">  <!-- TOP 9 / Evilseph83 -->
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/3qW6YNbmFHk/maxresdefault.jpg')">  <!-- TOP 10 / Evilseph83 -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/tco38Gho4EGivURlXgsDbzKRgRDZnP16YTI5hqOwMOR4WNJvS8gOAKQSVuKhUdjaXaErNKTV=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
-        <div class="numero">9</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/aCRnePB.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=3qW6YNbmFHk" target="_blank" style="color: white">Evilseph83 (Tartarus)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Islas Baleares</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">12 de Marzo del 2022</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: +31000</p>
-    </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/wOaaDLZNq5E/maxresdefault.jpg')">  <!-- TOP 10 / Mariuu_07 -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/kv9QqqcQCFS3z_VhXAI0v2H14b0NNHzmVoo1C7yTmGyERodlccrvR5pbODYlps3PMWUGxStKTDs=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">10</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/lbHve2J.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=wOaaDLZNq5E" target="_blank" style="color: white">Mariuu_07 (The Golden)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Región de Murcia</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">28 de Septiembre del 2021</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 85301</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/aCRnePB.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=3qW6YNbmFHk">Evilseph83 (Tartarus)</a></p>
+            <p class="ccaa"><i>Islas Baleares</i></p>
+            <p class="fecha">12 de Marzo del 2022</p>
+            <p class="intentos">Total de Intentos: +31000</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/DAheUI-DLxo/maxresdefault.jpg')">  <!-- TOP 11 / Droixz -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/2ILJGNU1N0HtcemcTZu247M5sedwLqbFQ7suwoeX8MvmGbks-1zZEvQC6hu-ky_aFlK06dxZ8O0=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/wOaaDLZNq5E/maxresdefault.jpg')">  <!-- TOP 11 / Mariuu_07 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/kv9QqqcQCFS3z_VhXAI0v2H14b0NNHzmVoo1C7yTmGyERodlccrvR5pbODYlps3PMWUGxStKTDs=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">11</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/PkfwWqr.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=DAheUI-DLxo&t" target="_blank" style="color: white">Droixz (Shukketsu)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Castilla-La Mancha</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">27 de Marzo del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: Desconocidos</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/lbHve2J.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=wOaaDLZNq5E">Mariuu_07 (The Golden)</a></p>
+            <p class="ccaa"><i>Región de Murcia</i></p>
+            <p class="fecha">28 de Septiembre del 2021</p>
+            <p class="intentos">Total de Intentos: 85301</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/yh2ByBKrTeY/maxresdefault.jpg')">  <!-- TOP 12 / ImCrisGD -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/bIh8Alm2usUpZP9uqmNX4GOdTmh7k7X8RImoW8cBQ9O6fymMjI8reYl3jL2CAPmXB_LC6vUOQw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/DAheUI-DLxo/maxresdefault.jpg')">  <!-- TOP 12 / Droixz -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/2ILJGNU1N0HtcemcTZu247M5sedwLqbFQ7suwoeX8MvmGbks-1zZEvQC6hu-ky_aFlK06dxZ8O0=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">12</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/6Bvua2y.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=yh2ByBKrTeY&t" target="_blank" style="color: white">ImCrisGD (Zodiac)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Comunidad Valenciana</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">23 de Marzo del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 18590</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/PkfwWqr.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=DAheUI-DLxo&t">Droixz (Shukketsu)</a></p>
+            <p class="ccaa"><i>Castilla-La Mancha</i></p>
+            <p class="fecha">27 de Marzo del 2023</p>
+            <p class="intentos">Total de Intentos: Desconocidos</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/IEqekY2I4ss/maxresdefault.jpg')">  <!-- TOP 13 / Zesorqe -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/wGkH2cjW0o-5cttCoI1oBQXXSzuGkaekBt0RlYk7Y4W6cyJbVhz-gaxgjT57TKWaUt473NdoXNs=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/yh2ByBKrTeY/maxresdefault.jpg')">  <!-- TOP 13 / ImCrisGD -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/AxGDA1teIauaNQsG2fotmd4uKsqcWme8GRX1fXMRZZdHxDsujQCg17JQeaaQXYUt7Kv4cdLhjl8=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">13</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/PXB3VYa.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=IEqekY2I4ss" target="_blank" style="color: white">Zesorqe (Cold Sweat)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Asturias</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">19 de Noviembre del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 56707</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/6Bvua2y.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=yh2ByBKrTeY&t">ImCrisGD (Zodiac)</a></p>
+            <p class="ccaa"><i>Comunidad Valenciana</i></p>
+            <p class="fecha">23 de Marzo del 2023</p>
+            <p class="intentos">Total de Intentos: 18590</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/KzzcejWCylU/hqdefault.jpg')">  <!-- TOP 14 / Neir -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/6hMPp55MQou4Z0ux0GHp-yVnBa6p79qwHq2u353l0F2FwMssJOOg-yAnXwS_62cGDKqb37fldSw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
-        <div class="numero-2">14</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/dbYiGf1.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=KzzcejWCylU" target="_blank" style="color: white">Neir (Renevant)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Aragón</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">17 de Agosto del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: Desconocidos</p>
-    </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/vAnIHh3FsMU/hqdefault.jpg')">  <!-- TOP 15 / NitrosHigh -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIf8zZSfvJtGx13Fj8W_zXBD09UIUmicjfmydNBgKTP3Jg=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
-        <div class="numero-2">15</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/3EP9sb3.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=vAnIHh3FsMU" target="_blank" style="color: white">NitrosHigh (Calculator Core)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Islas Canarias</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">28 de Marzo del 2021</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 10932</p>
-    </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/NzMGKhaK3Ac/maxresdefault.jpg')">  <!-- TOP 16 / eletriple -->
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/wyDErgHYab4/maxresdefault.jpg')">  <!-- TOP 14 / eletriple -->
         <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/HA1w0Hg6aghRufyQiQWnvipkGYcjB63Fm9Xbzbub7cGzmuEzGkRg5-YTa5M5jp6zoS81d0VzGg=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero-2">14</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/nSV04bJ.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=wyDErgHYab4&t">eletriple (Zodiac)</a></p>
+            <p class="ccaa"><i>País Vasco</i></p>
+            <p class="fecha">31 de Enero del 2024</p>
+            <p class="intentos">Total de Intentos: 27105</p>
+    </div>    
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/IEqekY2I4ss/maxresdefault.jpg')">  <!-- TOP 15 / Zesorqe -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/wGkH2cjW0o-5cttCoI1oBQXXSzuGkaekBt0RlYk7Y4W6cyJbVhz-gaxgjT57TKWaUt473NdoXNs=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero-2">15</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/PXB3VYa.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=IEqekY2I4ss">Zesorqe (Cold Sweat)</a></p>
+            <p class="ccaa"><i>Asturias</i></p>
+            <p class="fecha">19 de Noviembre del 2023</p>
+            <p class="intentos">Total de Intentos: 56707</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/KzzcejWCylU/hqdefault.jpg')">  <!-- TOP 16 / Neir -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/6hMPp55MQou4Z0ux0GHp-yVnBa6p79qwHq2u353l0F2FwMssJOOg-yAnXwS_62cGDKqb37fldSw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">16</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/nSV04bJ.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=NzMGKhaK3Ac" target="_blank" style="color: white">eletriple (Lucid Nightmares)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>País Vasco</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">29 de Diciembre del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 28961</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/dbYiGf1.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=KzzcejWCylU">Neir (Renevant)</a></p>
+            <p class="ccaa"><i>Aragón</i></p>
+            <p class="fecha">17 de Agosto del 2023</p>
+            <p class="intentos">Total de Intentos: Desconocidos</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/qaNRXoHOGso/maxresdefault.jpg')">  <!-- TOP 17 / TheSantyyy -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/_8C3izlviZVK1e61yK03Qcz4u24ETz6VYX9CQ9VLvn9UZh0-e0iChmXcz5kGmEcIN9JoKd12CQ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/vAnIHh3FsMU/hqdefault.jpg')">  <!-- TOP 17 / NitrosHigh -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIf8zZSfvJtGx13Fj8W_zXBD09UIUmicjfmydNBgKTP3Jg=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">17</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/GtYfh7h.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=qaNRXoHOGso" target="_blank" style="color: white">TheSantyyy (Jesse Pinkman)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Navarra</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">19 de Noviembre del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 19741</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/3EP9sb3.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=vAnIHh3FsMU">NitrosHigh (Calculator Core)</a></p>
+            <p class="ccaa"><i>Islas Canarias</i></p>
+            <p class="fecha">28 de Marzo del 2021</p>
+            <p class="intentos">Total de Intentos: 10932</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/muOBwtOKxkE/maxresdefault.jpg')">  <!-- TOP 18 / ZaforusGD -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/m0HUfzDkCJFSydvU05sKFogNYtm3uglOTej7ZSiW9ERsDIJn5CkKefMxiuJP3da0MyOHVmOWFg=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/qaNRXoHOGso/maxresdefault.jpg')">  <!-- TOP 18 / TheSantyyy -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/_8C3izlviZVK1e61yK03Qcz4u24ETz6VYX9CQ9VLvn9UZh0-e0iChmXcz5kGmEcIN9JoKd12CQ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">18</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/Li9iYCc.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=muOBwtOKxkE" target="_blank" style="color: white">ZaforusGD (Overtime)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Ciudad Autónoma de Ceuta</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">3 de Diciembre del 2023</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: 2602</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/GtYfh7h.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=qaNRXoHOGso">TheSantyyy (Jesse Pinkman)</a></p>
+            <p class="ccaa"><i>Navarra</i></p>
+            <p class="fecha">19 de Noviembre del 2023</p>
+            <p class="intentos">Total de Intentos: 19741</p>
     </div>
-    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/D9n5UgAcKuc/maxresdefault.jpg')">  <!-- TOP 19 / Gxterne -->
-        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/b-DGBjJvC6zZ1VzIhd39wthZvqYzXizLwJejHBGmkgS6U88UWSHCqvmt_K0qs-dLexBXZjFMVQ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/muOBwtOKxkE/maxresdefault.jpg')">  <!-- TOP 19 / ZaforusGD -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/m0HUfzDkCJFSydvU05sKFogNYtm3uglOTej7ZSiW9ERsDIJn5CkKefMxiuJP3da0MyOHVmOWFg=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
         <div class="numero-2">19</div>
-        <div><img class="imagen-ccaa" src="https://i.imgur.com/DgtitXI.png" alt="CCAA" style="width: 110px; height: 110px auto"></div>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 25px; font-weight: bold; color: white"><a href="https://www.youtube.com/watch?v=D9n5UgAcKuc" target="_blank" style="color: white">Gxterne (LiberG)</a></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; color: white"><i>Ciudad Autónoma de Melilla</i></p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 20px; font-weight: bold; color: white">12 de Marzo del 2022</p>
-            <p style="margin-top: 22px; margin-left: 22px; font-size: 18px; font-weight: bold; color: white">Total de Intentos: +31000</p>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/Li9iYCc.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=muOBwtOKxkE">ZaforusGD (Overtime)</a></p>
+            <p class="ccaa"><i>Ciudad Autónoma de Ceuta</i></p>
+            <p class="fecha">3 de Diciembre del 2023</p>
+            <p class="intentos">Total de Intentos: 2602</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/D9n5UgAcKuc/maxresdefault.jpg')">  <!-- TOP 20 / Gxterne -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/b-DGBjJvC6zZ1VzIhd39wthZvqYzXizLwJejHBGmkgS6U88UWSHCqvmt_K0qs-dLexBXZjFMVQ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero-2">20</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/DgtitXI.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=D9n5UgAcKuc">Gxterne (LiberG)</a></p>
+            <p class="ccaa"><i>Ciudad Autónoma de Melilla</i></p>
+            <p class="fecha">12 de Marzo del 2022</p>
+            <p class="intentos">Total de Intentos: +31000</p>
     </div>
 
 </body>
