@@ -1,0 +1,371 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #080F13;
+            margin: 0;
+            padding: 0;
+            font-family: "Lexend", sans-serif;
+        }
+        .cuadro-negro {
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            background-color: #1E2328;
+            border: 1px solid white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            top: 0;
+            margin-bottom: 0;
+            z-index: 999;
+        }
+        .cuadro-negro img {
+            max-width: 240px;
+            max-height: 60px;
+            width: auto;
+            height: auto;
+            margin-left: 20px;
+        }
+        .mapa-ccaa {
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .mapa-ccaa img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .cuadro-1 {
+            position: relative;
+            margin-top: 50px;
+            height: 200px;
+            width: 1300;
+            height: auto;
+            border: 1px solid white;
+            display: block;
+            justify-content: center;
+            overflow: hidden;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            margin-left: 300px;
+        }
+        .cuadro-1::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.50);
+        }
+        .cuadro-1 img {
+            max-width: 180px;
+            max-height: 180px;
+            width: auto;
+            height: auto;
+        }
+        .cuadro-1 p {
+            position: relative;
+            z-index: 3;
+            font-family: "Lexend", serif;
+        }
+        .imagen-icono {
+            margin-top: 20px;
+            margin-left: 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            z-index: 3;
+        }
+        .imagen-ccaa {
+            margin-top: 20px;
+            margin-right: 80px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-size: cover;
+            z-index: 3;
+        }
+        .numero {
+            position: absolute;
+            margin-top: 130px;
+            margin-left: 118px;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            z-index: 3;
+        }
+        .numero-2 {
+            position: absolute;
+            margin-top: 130px;
+            margin-left: 109px;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            z-index: 3;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 80px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            margin-left: auto;
+        }
+        li {
+            margin-left: 10px;
+        }
+        li a, .dropdown-btn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            text-align: left;
+            top: 66px;
+            border: 1px solid white;
+            right: 0;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 18px;
+            display: flex;
+            text-align: left;
+            text-decoration: none;
+        }
+        .dropdown-content img {
+            margin-right: 10px;
+            max-width: 25px;
+            max-height: 25px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition-delay: 0.2s;
+        }
+        .jugador {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        .jugador a {
+            target: _blank;
+            color: white;
+        }
+        .provincia {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            color: white;
+        }
+        .fecha {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .intentos {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cuadro-negro">
+        <a href="index.html"><img src="https://i.imgur.com/sUw38sE.png" alt="Logo" title="Hola"></a>
+        <p style="font-size: 20px; color: white; padding: 5px 10px; margin-bottom: 0; margin-left: 5px;">Versión Demo</p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="GDE-CCAA.html">Comunidades Autónomas</a></li>
+                <li><a href="GDE-Provincias.html">Provincias</a></li>
+                <li><a href="#">Hardest de España</a></li>
+                <li><a href="#">Hardest del Año</a></li>
+            </ul>
+    </div>
+    <p style="text-align: center; margin-top: 130px; font-size: 50px; font-weight: bold; color: white; font-weight: bold;">PROVINCIAS</p>
+    <div class="mapa-ccaa">
+        <img style="width: 1300" src="https://raw.githubusercontent.com/GDSpain/web/main/Espa%C3%B1a-Provincias-TR.png" alt="Segunda-Imagen">
+    </div>
+    <p style="text-align: center; margin-left: 250px; margin-right: 250px; font-size: 20px; color: white">Fecha: 3 de Febrero del 2024</p>
+
+    <img src="https://i.imgur.com/6YdwDmd.png" style="margin-top: 60px; display: block; margin: 60px auto 10px; max-width: 30%; max-height: 30%" alt="Andalucía"> <!-- ANDALUCÍA -->
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/duqm2EDZFzo/maxresdefault.jpg')">  <!-- TOP 1 / Miguel6456 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/MXPuGNnE6pcnPXve_T-Kx8gwHJGEyDPiBP7FFKDIQMZFL2I5tSV7fO3c_ysqznBLEoHOz4dvEA=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">1</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Provincia_de_C%C3%B3rdoba_-_Bandera.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=duqm2EDZFzo">Miguel6456 (LIMBO)</a></p>
+            <p class="provincia"><i>Córdoba</i></p>
+            <p class="fecha">7 de Agosto del 2023</p>
+            <p class="intentos">Total de Intentos: 35312</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/TrquqdExBOU/maxresdefault.jpg')">  <!-- TOP 2 / ElTitoGuille -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/6v9pcP9y_WMSjcRRZlcRp0gjv6Ze0kDSf50fe_jmwCOUbq47ie_bC5qGEt_B7d-dKKtiugMvfw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Flag_M%C3%A1laga_Province.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=TrquqdExBOU&t">ElTitoGuille (LIMBO)</a></p>
+            <p class="provincia"><i>Málaga</i></p>
+            <p class="fecha">14 de Diciembre del 2023</p>
+            <p class="intentos">Total de Intentos: 30965</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/A9a6TxFpMBA/maxresdefault.jpg')">  <!-- TOP 3 / xJuan98 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/4WqX7g7dcbrdWfL9QUsJLMeJbsXOv93saxIJbo7d8xQnCxNBBO2lDqdXTzTe0mis--tLrNCrXA=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">3</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Bandera_de_la_provincia_de_Granada_%28Espa%C3%B1a%29.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=A9a6TxFpMBA">xJuan98 (Tartarus)</a></p>
+            <p class="provincia"><i>Granada</i></p>
+            <p class="fecha">27 de Agosto del 2021</p>
+            <p class="intentos">Total de Intentos: +56000</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/PBd02YoeRmY/maxresdefault.jpg')">  <!-- TOP 4 / EastShark1 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/LgOFHQ-avq8vK_MW9LTN7HJXG7m4oiD6B4tcp5Ra6Chp_VTykfnYlJsKPpVaVDmzBqh_hf6dIw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">4</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Flag_C%C3%A1diz_Province.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=PBd02YoeRmY">EastShark1 (Solar Flare)</a></p>
+            <p class="provincia"><i>Cádiz</i></p>
+            <p class="fecha">23 de Julio del 2023</p>
+            <p class="intentos">Total de Intentos: 169160</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/49B_aRlLTzc/maxresdefault.jpg')">  <!-- TOP 5 / Wity26 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIf8zZQ2J7bBRzhdPc2-VIQyJyHwlLuufQ4ZMK4tH_nrlA=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">5</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Provincia_de_C%C3%B3rdoba_-_Bandera.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=49B_aRlLTzc">Wity26 (Aerial Gleam)</a></p>
+            <p class="provincia"><i>Sevilla</i></p>
+            <p class="fecha">25 de Agosto del 2023</p>
+            <p class="intentos">Total de Intentos: ~37000</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/EomnbNL9fbU/hqdefault.jpg')">  <!-- TOP 6 / Lenx -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/DvmGpkhmdSyqiIuonIJ0DxphtZ4DnFcd-US9EmwJAwyzG2QxS7H6Dd3iXd3BOThI67gGZLfe3g=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">6</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/2/24/Bandera_de_la_Provincia_De_Huelva.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=EomnbNL9fbU">Lenx (kowareta)</a></p>
+            <p class="provincia"><i>Huelva</i></p>
+            <p class="fecha">2 de Noviembre del 2023</p>
+            <p class="intentos">Total de Intentos: 53287</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/B-4yd5GUApY/maxresdefault.jpg')">  <!-- TOP 7 / Gryllex -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIf8zZShnnkRp6hkwNq9_lG8KtqOUC8USWmZSf13sabG0A=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">7</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_Almer%C3%ADa_Province.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=B-4yd5GUApY">Gryllex (Infernal Abyss)</a></p>
+            <p class="provincia"><i>Almería</i></p>
+            <p class="fecha">27 de Agosto del 2020</p>
+            <p class="intentos">Total de Intentos: 3226</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/RRcZHnZUqfA/maxresdefault.jpg')">  <!-- TOP 8 / Reshi -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/Jg4nT4sNuXwWkzS_Qyjw_XaGWZnwEJNFb6I7x2efkrqJ4RIrRJnmu9hUVSi8gwr_tbMPSq8nJA=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">8</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Bandera_de_la_provincia_de_Ja%C3%A9n.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=RRcZHnZUqfA">Reshi (Aftermath)</a></p>
+            <p class="provincia"><i>Jaén</i></p>
+            <p class="fecha">30 de Julio del 2020</p>
+            <p class="intentos">Total de Intentos: 6940</p>
+        </div>
+
+    <img src="https://i.imgur.com/vIA7nH7.png" style="margin-top: 60px; display: block; margin: 60px auto 10px; max-width: auto; max-height: 18%" alt="Aragón"> <!-- ARAGÓN -->
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/KzzcejWCylU/hqdefault.jpg')">  <!-- TOP 1 / Neir -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/6hMPp55MQou4Z0ux0GHp-yVnBa6p79qwHq2u353l0F2FwMssJOOg-yAnXwS_62cGDKqb37fldSw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">1</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Bandera_de_la_provincia_de_Zaragoza.svg" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=KzzcejWCylU">Neir (Renevant)</a></p>
+            <p class="provincia"><i>Zaragoza</i></p>
+            <p class="fecha">17 de Agosto del 2023</p>
+            <p class="intentos">Total de Intentos: Desconocidos</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/gXuBF47F_YY/maxresdefault.jpg')">  <!-- TOP 2 / ElKyrdisi16 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/7H6DAnaoUu93pB-bfTQnqMyND2iftqeVVdI849HSS9FsS_PURbM1iUUZAfFdqyUh6AMv9p5YXlI=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Huesca_%28province%29.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=gXuBF47F_YY">ElKyrdisi16 (Black Blizzard)</a></p>
+            <p class="provincia"><i>Huesca</i></p>
+            <p class="fecha">4 de Diciembre del 2022</p>
+            <p class="intentos">Total de Intentos: 6322</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/bh8DUSJ21ls/hqdefault.jpg')">  <!-- TOP 3 / Bontrap -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/s8YhddCtn-Qy9AxkyE-1xTYdd3Yo4KUkltDU55R59comuw0nrddN8q9O7ITI6okvUstL8BWHyw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">3</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Teruel_%28province%29.svg" alt="Provincia" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=bh8DUSJ21ls">Bontrap (SFW)</a></p>
+            <p class="provincia"><i>Teruel</i></p>
+            <p class="fecha">23 de Julio del 2023</p>
+            <p class="intentos">Total de Intentos: 2316</p>
+        </div>
+
+    <img src="https://i.imgur.com/xqDE9bD.png" style="margin-top: 60px; display: block; margin: 60px auto 10px; max-width: auto; max-height: 12%" alt="Asturias"> <!-- ASTURIAS -->
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/IEqekY2I4ss/maxresdefault.jpg')">  <!-- TOP 13 / Zesorqe -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/wGkH2cjW0o-5cttCoI1oBQXXSzuGkaekBt0RlYk7Y4W6cyJbVhz-gaxgjT57TKWaUt473NdoXNs=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=IEqekY2I4ss">Zesorqe (Cold Sweat)</a></p>
+            <p class="provincia"><i>Asturias</i></p>
+            <p class="fecha">19 de Noviembre del 2023</p>
+            <p class="intentos">Total de Intentos: 56707</p>
+        </div>
+
+    <img src="https://i.imgur.com/8MF4O6M.png" style="margin-top: 60px; display: block; margin: 60px auto 10px; max-width: auto; max-height: 12%" alt="Baleares"> <!-- BALEARES -->
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/3qW6YNbmFHk/maxresdefault.jpg')">  <!-- TOP 1 / Evilseph83 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/tco38Gho4EGivURlXgsDbzKRgRDZnP16YTI5hqOwMOR4WNJvS8gOAKQSVuKhUdjaXaErNKTV=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=3qW6YNbmFHk">Evilseph83 (Tartarus)</a></p>
+            <p class="provincia"><i>Islas Baleares</i></p>
+            <p class="fecha">12 de Marzo del 2022</p>
+            <p class="intentos">Total de Intentos: +31000</p>
+        </div>
+
+    <img src="https://i.imgur.com/WnlhqLs.png" style="margin-top: 60px; display: block; margin: 60px auto 10px; max-width: auto; max-height: 12%" alt="Canarias"> <!-- CANARIAS -->
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/vAnIHh3FsMU/hqdefault.jpg')">  <!-- TOP 1 / NitrosHigh -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIf8zZSfvJtGx13Fj8W_zXBD09UIUmicjfmydNBgKTP3Jg=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">1</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Bandera_Provincial_de_Las_Palmas.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=vAnIHh3FsMU">NitrosHigh (Calculator Core)</a></p>
+            <p class="provincia"><i>Las Palmas de Gran Canaria</i></p>
+            <p class="fecha">28 de Marzo del 2021</p>
+            <p class="intentos">Total de Intentos: 10932</p>
+        </div>
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/AAsJ-I41FUA/maxresdefault.jpg')">  <!-- TOP 2 / Praivet -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/9GMj5i7GsuK6HA9r2B63kU17XXOg0dZlowSValL-uXXeTpSJComAFy0peDjKNOVVSqjjm_CwyQ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2</div>
+        <div><img class="imagen-ccaa" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Provincia_de_Santa_Cruz_de_Tenerife_-_Bandera.svg" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=AAsJ-I41FUA">Praivet (Inflective)</a></p>
+            <p class="provincia"><i>Santa Cruz de Tenerife</i></p>
+            <p class="fecha">12 de Enero del 2024</p>
+            <p class="intentos">Total de Intentos: 15271</p>
+        </div>
+
+    <img src="https://i.imgur.com/qeYNT31.png" style="margin-top: 60px; display: block; margin: 60px auto 10px; max-width: auto; max-height: 12%" alt="Cantabria"> <!-- CANTABRIA -->
+        <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/3qW6YNbmFHk/maxresdefault.jpg')">  <!-- TOP 1 / 400 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ZCmPGJ4buIZ71Icvq2DOQyZgNTqTKCaE6SFpYZ41E8F8SMJ1yOL421jtg3CJHxO4X96kkMtv=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=CFtKelNdGCQ">Cuatrocientos (LIMBO)</a></p>
+            <p class="provincia"><i>Cantabria</i></p>
+            <p class="fecha">23 de Junio del 2023</p>
+            <p class="intentos">Total de Intentos: 47434</p>
+        </div>
+</body>
+</html>
