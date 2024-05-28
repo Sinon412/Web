@@ -1,0 +1,384 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #080F13;
+            margin: 0;
+            padding: 0;
+            font-family: "Lexend", sans-serif;
+        }
+        .cuadro-negro {
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            background-color: #1E2328;
+            border: 1px solid white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            top: 0;
+            margin-bottom: 0;
+            z-index: 999;
+        }
+        .cuadro-negro img {
+            max-width: 240px;
+            max-height: 60px;
+            width: auto;
+            height: auto;
+            margin-left: 20px;
+        }
+        .mapa-ccaa {
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .mapa-ccaa img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .cuadro-1 {
+            position: relative;
+            margin-top: 50px;
+            width: 1300;
+            height: auto;
+            border: 1px solid white;
+            display: block;
+            justify-content: center;
+            overflow: hidden;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            margin: 50px auto 0px;
+        }
+        .cuadro-1::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.50);
+        }
+        .cuadro-1 img {
+            max-width: 180px;
+            max-height: 180px;
+            width: auto;
+            height: auto;
+        }
+        .cuadro-1 p {
+            position: relative;
+            z-index: 3;
+            font-family: "Lexend", serif;
+        }
+        .imagen-icono {
+            margin-top: 20px;
+            margin-left: 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            z-index: 3;
+        }
+        .imagen-ccaa {
+            margin-top: 20px;
+            margin-right: 80px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-size: cover;
+            z-index: 3;
+        }
+        .numero {
+            position: absolute;
+            margin-top: 130px;
+            margin-left: 85px;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            z-index: 3;
+        }
+        .numero-2 {
+            position: absolute;
+            margin-top: 130px;
+            margin-left: 109px;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            z-index: 3;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 80px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            margin-left: auto;
+        }
+        li {
+            margin-left: 10px;
+        }
+        li a, .dropdown-btn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            text-align: left;
+            top: 66px;
+            border: 1px solid white;
+            right: 0;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 18px;
+            display: flex;
+            text-align: left;
+            text-decoration: none;
+        }
+        .dropdown-content img {
+            margin-right: 10px;
+            max-width: 25px;
+            max-height: 25px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            transition-delay: 0.2s;
+        }
+        .jugador {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        .jugador a {
+            target: _blank;
+            color: white;
+        }
+        .ccaa {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            color: white;
+        }
+        .fecha {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .intentos {
+            margin-top: 22px;
+            margin-left: 22px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+        .mapadiv {
+            width: 54%;
+            margin: auto;
+        }
+        .mapadiv path {
+            fill: #FFDAB9;
+            stroke: #000000;
+            stroke-width: 1px;
+        }
+        .mapadiv :hover {
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cuadro-negro">
+        <a href="index.html"><img src="https://i.imgur.com/sUw38sE.png" alt="Logo" title="Hola"></a>
+        <p style="font-size: 20px; color: white; padding: 5px 10px; margin-bottom: 0; margin-left: 5px;">Versión Demo</p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="GDE-CCAA.html">Comunidades Autónomas</a></li>
+                <li><a href="GDE-Provincias.html">Provincias</a></li>
+                <li><a href="GDE-HardestES.html">Hardest de España</a></li>
+                <li><a href="GDE-HardestAN.html">Hardest del Año</a></li>
+            </ul>
+    </div>
+    <p style="text-align: center; margin-top: 130px; font-size: 50px; font-weight: bold; color: white; font-weight: bold;">HARDEST DEL AÑO</p>
+    <p style="text-align: center; margin-left: 250px; margin-right: 250px; font-size: 20px; color: white">Hardest del año, son los niveles más difíciles completados desde 2014 hasta la actualidad</p>
+
+    <div class="cuadro-1" style="background-image: url('https://i3.ytimg.com/vi/hOZ4WRK3vtw/maxresdefault.jpg')">  <!-- 2014 / GuitarHeroStyles -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/bsG7cVbiXlZw1_MxksTaxuqLhpXgfEAkJrvZ1gdLjQNVPDs8i0Kzpez_S9dr77JqMiSPRgRIYw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2014</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=hOZ4WRK3vtw">GuitarHeroStyles (DeCode)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">18 de Diciembre del 2014</p>
+            <p class="intentos">Total de Intentos: ~1000</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/xKriQRv3A5k/maxresdefault.jpg')">  <!-- 2015 / SrGuillester -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIdro_lp6Jdsbhq-QygrX9bANIblcKO714MZQhD5Kjc3shQt3Dc=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2015</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/5gRFy6l.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=xKriQRv3A5k">SrGuillester (ICE Carbon Diablo X)</a></p>
+            <p class="ccaa"><i>Comunidad de Madrid</i></p>
+            <p class="fecha">14 de Diciembre del 2015</p>
+            <p class="intentos">Total de Intentos: 15188</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/FgoiKkEGV20/maxresdefault.jpg')">  <!-- 2016 / SoulsTRK -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIdro_kwhK7FA8zq_4P3fivc44PxCYK7DRtCjVpHZgibqF_IGOg=s176-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2016</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/QgLa4AP.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=FgoiKkEGV20">SoulsTRK (Bloodbath)</a></p>
+            <p class="ccaa"><i>Cataluña</i></p>
+            <p class="fecha">5 de Abril del 2016</p>
+            <p class="intentos">Total de Intentos: 34623</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/qsFa-5fS9s8/hqdefault.jpg')">  <!-- 2016 / Molni -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIdro_m6ZoMUZJOniZ5PQMUrBd3oyW5QfNVT7514alzd8yidb_k=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2016</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/5gRFy6l.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=qsFa-5fS9s8">Molni (Bloodbath)</a></p>
+            <p class="ccaa"><i>Comunidad de Madrid</i></p>
+            <p class="fecha">5 de Agosto del 2016</p>
+            <p class="intentos">Total de Intentos: 40324</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/80l8c_ohD7M/maxresdefault.jpg')">  <!-- 2016 / GuitarHeroStyles -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/bsG7cVbiXlZw1_MxksTaxuqLhpXgfEAkJrvZ1gdLjQNVPDs8i0Kzpez_S9dr77JqMiSPRgRIYw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2016</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=80l8c_ohD7M">GuitarHeroStyles (Bloodbath)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">24 de Agosto del 2016</p>
+            <p class="intentos">Total de Intentos: 17147</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/K3Pq6O_ZeNo/maxresdefault.jpg')">  <!-- 2017 / SoulsTRK -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIdro_kwhK7FA8zq_4P3fivc44PxCYK7DRtCjVpHZgibqF_IGOg=s176-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2017</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/QgLa4AP.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=K3Pq6O_ZeNo">SoulsTRK (Artificial Ascent)</a></p>
+            <p class="ccaa"><i>Cataluña</i></p>
+            <p class="fecha">30 de Noviembre del 2017</p>
+            <p class="intentos">Total de Intentos: 56707</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/BuKzEBPZcAc/maxresdefault.jpg')">  <!-- 2018 / LFlex -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/fB7YXWpqNKCEM7BVp85NCXKstHI6lPNk_IomX982fxD1u7h_kGFR-tkWqvSdAOj6-MosW_nQ6g=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2018</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=BuKzEBPZcAc">LFlex (Bloodlust)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">14 de Marzo del 2018</p>
+            <p class="intentos">Total de Intentos: Desconocidos</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/bduS_B6xKBc/maxresdefault.jpg')">  <!-- 2019 / NitrosHigh -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIf8zZSfvJtGx13Fj8W_zXBD09UIUmicjfmydNBgKTP3Jg=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2019</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/3EP9sb3.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=bduS_B6xKBc">NitrosHigh (Spacial Rend)</a></p>
+            <p class="ccaa"><i>Islas Canarias</i></p>
+            <p class="fecha">18 de Noviembre del 2019</p>
+            <p class="intentos">Total de Intentos: Desconocidos</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/5LjFfnDsWo8/maxresdefault.jpg')">  <!-- 2020 / Evilseph83 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/tco38Gho4EGivURlXgsDbzKRgRDZnP16YTI5hqOwMOR4WNJvS8gOAKQSVuKhUdjaXaErNKTV=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2020</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/aCRnePB.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=5LjFfnDsWo8">Evilseph83 (Wasureta)</a></p>
+            <p class="ccaa"><i>Islas Baleares</i></p>
+            <p class="fecha">10 de Octubre del 2020</p>
+            <p class="intentos">Total de Intentos: 22329</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/W93k41oxYNA/hqdefault.jpg')">  <!-- 2020 / Wity26 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ytc/AIf8zZQ2J7bBRzhdPc2-VIQyJyHwlLuufQ4ZMK4tH_nrlA=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2020</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=W93k41oxYNA">Wity26 (Wasureta)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">8 de Diciembre del 2020</p>
+            <p class="intentos">Total de Intentos: 13357</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/KVBqoqYx8Tg/maxresdefault.jpg')">  <!-- 2021 / BlazerWolf -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/zo0FpgI5dWUTqBmctOHSYGrMCmF4Gk8IcF3Wjr5s0Dg5z7dpNDEZWsu2PQ31QXkp5_oNAXt42A=s176-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2021</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/L9Fy59u.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=KVBqoqYx8Tg">BlazerWolf (Zodiac)</a></p>
+            <p class="ccaa"><i>La Rioja</i></p>
+            <p class="fecha">21 de Agosto del 2021</p>
+            <p class="intentos">Total de Intentos: 45255</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/3qW6YNbmFHk/maxresdefault.jpg')">  <!-- 2021 / Evilseph83 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/tco38Gho4EGivURlXgsDbzKRgRDZnP16YTI5hqOwMOR4WNJvS8gOAKQSVuKhUdjaXaErNKTV=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+        <div class="numero">2021</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/aCRnePB.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=3qW6YNbmFHk">Evilseph83 (Tartarus)</a></p>
+            <p class="ccaa"><i>Islas Baleares</i></p>
+            <p class="fecha">12 de Marzo del 2022</p>
+            <p class="intentos">Total de Intentos: +31000</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/SOJwJm72ULQ/maxresdefault.jpg')">  <!-- 2022 / TerrBonnie -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/W3pf3tCNSPKwuPEp2-rQ41JpZ6Q8ka3GtjO48Qgzw5hOHqBve8y8Gf8TTpmQcsU1ys_xIGfJ=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2022</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/vGfZFMl.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=SOJwJm72ULQ">TerrBonnie (Firework)</a></p>
+            <p class="ccaa"><i>Castilla y León</i></p>
+            <p class="fecha">22 de Agosto del 2022</p>
+            <p class="intentos">Total de Intentos: 42280</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/CFtKelNdGCQ/maxresdefault.jpg')">  <!-- 2023 / 400 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/ZCmPGJ4buIZ71Icvq2DOQyZgNTqTKCaE6SFpYZ41E8F8SMJ1yOL421jtg3CJHxO4X96kkMtv=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2023</div>
+        <div><img class="imagen-ccaa" src="https://i.imgur.com/ewSwZGp.png" alt="CCAA" style="width: 110px; height: auto"></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=CFtKelNdGCQ">Cuatrocientos (LIMBO)</a></p>
+            <p class="ccaa"><i>Cantabria</i></p>
+            <p class="fecha">23 de Junio del 2023</p>
+            <p class="intentos">Total de Intentos: 17853</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/duqm2EDZFzo/maxresdefault.jpg')">  <!-- 2023 / Miguel6456 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/MXPuGNnE6pcnPXve_T-Kx8gwHJGEyDPiBP7FFKDIQMZFL2I5tSV7fO3c_ysqznBLEoHOz4dvEA=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2023</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=duqm2EDZFzo">Miguel6456 (LIMBO)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">7 de Agosto del 2023</p>
+            <p class="intentos">Total de Intentos: 35312</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/TrquqdExBOU/maxresdefault.jpg')">  <!-- 2023 / ElTitoGuille -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/6v9pcP9y_WMSjcRRZlcRp0gjv6Ze0kDSf50fe_jmwCOUbq47ie_bC5qGEt_B7d-dKKtiugMvfw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero">2023</div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=TrquqdExBOU&t">ElTitoGuille (LIMBO)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">14 de Diciembre del 2023</p>
+            <p class="intentos">Total de Intentos: 30965</p>
+    </div>
+    <div class="cuadro-1" style="margin-top: 0px; background-image: url('https://i3.ytimg.com/vi/7XXOTY_7Lb0/maxresdefault.jpg')">  <!-- 2024 / EastShark1 -->
+        <div><img class="imagen-icono" src="https://yt3.googleusercontent.com/LgOFHQ-avq8vK_MW9LTN7HJXG7m4oiD6B4tcp5Ra6Chp_VTykfnYlJsKPpVaVDmzBqh_hf6dIw=s900-c-k-c0x00ffffff-no-rj" alt="Icono" style="width: 100px; height: 100px"></div>
+            <div class="numero"><i>2024</i></div>
+        <div><a href="Andalucia.html"><img class="imagen-ccaa" src="https://i.imgur.com/dBbMNSo.png" alt="CCAA" style="width: 110px; height: auto"></a></div>
+            <p class="jugador"><a href="https://www.youtube.com/watch?v=7XXOTY_7Lb0">EastShark1 (Deimos)</a></p>
+            <p class="ccaa"><i>Andalucía</i></p>
+            <p class="fecha">27 de Febrero del 2024</p>
+            <p class="intentos">Total de Intentos: 110501</p>
+    </div>
+</body>
+</html>
