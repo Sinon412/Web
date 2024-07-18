@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const contenedor = document.getElementById('contenido');
+    const contenedor = document.getElementById('Contenido');
 
     function cargarContenido(url, elemento) {
         fetch(url)
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (contenedor) {
-        cargarContenido('contenido.html', contenedor);
+        cargarContenido('Contenido.html', contenedor);
     } else {
         console.error('No se encontró el contenedor con el ID "contenido".');
     }
