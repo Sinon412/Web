@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Demonlist</title>
+    <title>ElTigreVerde412</title>
     <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/GDSpain/web/main/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,11 +56,11 @@
             margin-left: 20px;
             padding: 10px;
             color: white;
-            border-bottom: none; /* Elimina el borde inferior */
+            border-bottom: none;
             text-align: left;
         }
         .main-content {
-            margin-left: 220px; /* Ajusta este valor según el ancho de la barra lateral */
+            margin-left: 412px;
             padding: 20px;
             width: calc(100% - 220px);
             margin-top: 80px;
@@ -116,26 +116,23 @@
             display: block;
             transition-delay: 0.1s;
         }
-        .texto-normal {
-            text-align: center;
-            margin-left: 250px;
-            margin-right: 250px;
-            font-size: 20px;
-            color: white;
-        }
-        .texto-bold {
-            text-align: center;
-            margin-left: 250px;
-            margin-right: 250px;
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-        }
         .bandera {
-            width: 40px;
+            width: 100px;
             height: auto;
             box-align: center;
             vertical-align: text-top;
+        }
+        .texto-nombre {
+            text-align: left;
+            margin-right: 250px;
+            font-size: 50px;
+            color: white;
+        }
+        .texto-normal {
+            text-align: left;
+            margin-left: -250px;
+            font-size: 30px;
+            color: white;
         }
     </style>
 </head>
@@ -152,11 +149,21 @@
         </ul>
     </div>
     
-    <php include another-content.html>
+    <div class="cuadro-lista">
     </div>
-    
+
+        <div class="sidebar" id="Contenido">
+    </div>
+
+    <script src="Script.js"></script>
+
     <div class="main-content">
-        <!-- Aquí puedes añadir el contenido principal -->
-    </div>
+        <div class="cuadro-1">
+            <a class="texto-nombre" style="font-weight: bold"><img class="bandera" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Castile-La_Mancha.svg" title="Castilla-La Mancha"> ElTigreVerde412 <img class="bandera" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Flag_Guadalajara_Province.svg" title="Guadalajara">
+
+        </div>
+    <div class="cuadro-1">
+    <a class="texto-normal">#1 (350,00)
+
 </body>
 </html>
